@@ -46,6 +46,6 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
           release-type: node
-      - if: ${{ steps.release.outputs.release_created }}
+      - if: ${{ steps.release.outputs.prs_created }}
         run: |
           sed -i 's/^version: .*/version: ${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }} /' helm/Chart.yaml
