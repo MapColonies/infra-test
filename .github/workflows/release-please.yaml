@@ -42,11 +42,15 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository from latest commit
+        uses: actions/checkout@v4
+
       - uses: google-github-actions/release-please-action@v4
         id: release-please
         with:
           token: ${{ secrets.GH_PAT }}
           release-type: node
+
       - if: ${{ steps.release-please.outputs.prs_created }}
         run: |
           sed -i 's/^version: .*/version: ${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }} /' helm/Chart.yaml
