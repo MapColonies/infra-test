@@ -43,9 +43,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v4
+        id: release-please
         with:
           token: ${{ secrets.GH_PAT }}
           release-type: node
-      - if: ${{ steps.release.outputs.prs_created }}
+      - if: ${{ steps.release-please.outputs.prs_created }}
         run: |
           sed -i 's/^version: .*/version: ${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }} /' helm/Chart.yaml
