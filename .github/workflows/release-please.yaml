@@ -1,4 +1,10 @@
 on:
+  workflow_dispatch:
+    inputs:
+      release-as:
+        type: string
+        description: 'Override the next version of the repository'
+        required: false
   push:
     branches:
       - master
@@ -13,6 +19,13 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        if: github.event.inputs.release-as != ''
+        run: |
+          git config user.email "devops@mapcolonies.com"
+          git config user.name "mapcolonies[bot]"          
+          git commit --allow-empty -m "chore: release ${{ github.event.inputs.release-as  }}" -m "Release-As: ${{ github.event.inputs.release-as  }}"
+
       - uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GH_PAT }}
