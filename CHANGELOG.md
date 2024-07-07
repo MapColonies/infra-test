@@ -1,5 +1,29 @@
 # Changelog
 
+## [5.0.0](https://github.com/MapColonies/infra-test/compare/infra-test-v2.6.7...infra-test-v5.0.0) (2024-07-07)
+
+
+### Miscellaneous Chores
+
+* release v5.0.0 ([e3f70e6](https://github.com/MapColonies/infra-test/commit/e3f70e606069a9e60a6d29fc50f6e9dfa46b9acd))
+
+## [2.6.7](https://github.com/MapColonies/infra-test/compare/infra-test-v2.1.0...infra-test-v2.6.7) (2024-07-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove exclamantion mark
+
+### Miscellaneous Chores
+
+* release v2.4.1 ([94f5616](https://github.com/MapColonies/infra-test/commit/94f561672c4254a622c3267090ddc58ae9e21124))
+* release v2.6.7 ([ae2cccb](https://github.com/MapColonies/infra-test/commit/ae2cccb1ef93dd33259b34dbb10b365e02e87cd9))
+
+
+### Code Refactoring
+
+* remove exclamantion mark ([c6bfbaf](https://github.com/MapColonies/infra-test/commit/c6bfbafa82d120e947b15da38d087ce6524172d6))
+
 ## [2.1.0](https://github.com/MapColonies/infra-test/compare/infra-test-v2.0.0...infra-test-v2.1.0) (2024-07-07)
 
 
