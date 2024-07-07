@@ -70,6 +70,6 @@ jobs:
         run: npm install
 
       - name: Release Please - Bump version and create release PR
-        run: npx release-please repo-url MapColonies/infra-test release-pr
+        run: npx release-please --repo-url MapColonies/infra-test release-pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
