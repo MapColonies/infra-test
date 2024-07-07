@@ -17,22 +17,7 @@ name: release-please
 
 jobs:
   release-please:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Configure Git  
-        if: github.event.inputs.release-as != ''
-        run: |
-          git config user.email "devops@mapcolonies.com"
-          git config user.name "mapcolonies[bot]"          
-          git commit --allow-empty -m "chore: release ${{ github.event.inputs.release-as  }}" -m "Release-As: ${{ github.event.inputs.release-as  }}"
-          git push
-
-      - name: Release Please
-        uses: googleapis/release-please-action@v4
-        with:
-          token: ${{ secrets.GH_PAT }}
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
+      uses: MapColonies/shared-workflows/.github/workflows/release-please.yaml@add_release_please
+      secrets: inherit
+      with:
+        release-as: ${{ github.event.inputs.release-as }}
