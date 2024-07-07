@@ -64,12 +64,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Use the Node.js version your project requires
+          node-version: lts
 
       - name: Install dependencies
         run: npm install
 
       - name: Release Please - Bump version and create release PR
-        run: npx release-please release-pr
+        run: npx release-please repo-url MapColonies/infra-test release-pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
