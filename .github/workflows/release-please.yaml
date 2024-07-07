@@ -55,21 +55,37 @@ on:
       - master
 
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Release Please - Bump version and create release PR
-        run: npx release-please --repo-url MapColonies/infra-test release-pr
+      - name: Create Release PR
+        run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get the Version
+        id: get_version
+        run: |
+          version=$(cat package.json | jq -r .version)
+          echo "version=$version" >> $GITHUB_ENV
+
+      - name: Update Chart.yaml
+        run: |
+          version=${{ env.version }}
+          sed -i "s/^version:.*/version: $version/" helm/Chart.yaml
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add helm/Chart.yaml
+          git commit -m "chore: bump Chart.yaml version to $version"
+          git push origin master

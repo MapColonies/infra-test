@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "release-please release-pr --token=${{ secrets.GITHUB_TOKEN }}"
+  },
+  "devDependencies": {
+    "release-please": "^15.3.0"
   },
   "keywords": [],
   "author": "",
