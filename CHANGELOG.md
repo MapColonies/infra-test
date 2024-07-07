@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/MapColonies/infra-test/compare/infra-test-v1.0.0...infra-test-v2.0.0) (2024-07-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* matoki
+
+### Features
+
+* matoki ([8c03d30](https://github.com/MapColonies/infra-test/commit/8c03d307215576e09b7504c0bf112969b8e2c15a))
+
 ## 1.0.0 (2024-07-07)
 
 
