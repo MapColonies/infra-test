@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.1.0](https://github.com/MapColonies/infra-test/compare/infra-test-v2.0.0...infra-test-v2.1.0) (2024-07-07)
+
+
+### Features
+
+* lol ([1b33be6](https://github.com/MapColonies/infra-test/commit/1b33be644d11a3797fa231ff9b420db1b0a54ee0))
+* lol ([35e2c15](https://github.com/MapColonies/infra-test/commit/35e2c154b11dbc8740c846341c8f89878f3b0c4c))
+* matoki ([1e77deb](https://github.com/MapColonies/infra-test/commit/1e77deb80631bae9b682dd23b8561476519e7cf0))
+* matoki ([4e0073a](https://github.com/MapColonies/infra-test/commit/4e0073a26e661b2aa32dfc9197d92875d8c7ef36))
+
 ## [2.0.0](https://github.com/MapColonies/infra-test/compare/infra-test-v1.0.0...infra-test-v2.0.0) (2024-07-07)
 
 
