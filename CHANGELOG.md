@@ -1,5 +1,21 @@
 # Changelog
 
+## [6.0.0](https://github.com/MapColonies/infra-test/compare/infra-test-v5.0.0...infra-test-v6.0.0) (2024-07-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove exclamantion mark
+
+### Features
+
+* add release-please ci ([508964a](https://github.com/MapColonies/infra-test/commit/508964a670d7fd99b5a09f1297c383b213da1b57))
+
+
+### Code Refactoring
+
+* remove exclamantion mark ([c66c9cf](https://github.com/MapColonies/infra-test/commit/c66c9cf0d720d98295a3851d19cc9fa6880c668c))
+
 ## [5.0.0](https://github.com/MapColonies/infra-test/compare/infra-test-v2.6.7...infra-test-v5.0.0) (2024-07-07)
 
 
