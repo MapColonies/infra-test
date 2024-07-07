@@ -1,1 +1,1 @@
-console.log("Snap out of it!");
+console.log("Snap out of it.");
