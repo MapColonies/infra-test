@@ -5,5 +5,5 @@ on:
 
 jobs:
   build-and-push-docker:
-      uses: MapColonies/shared-workflows/.github/workflows/build-and-push-docker.yaml@master
+      uses: MapColonies/shared-workflows/.github/workflows/build-and-push-docker.yaml@format-files
       secrets: inherit
