@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_and_push_docker:
-      uses: MapColonies/shared-workflows/.github/workflows/build-and-push-docker.yaml@chore/change-git-commit-message
+  build-and-push-docker:
+      uses: MapColonies/shared-workflows/.github/workflows/build-and-push-docker.yaml@master
       secrets: inherit
       with:
         scope: infra

@@ -1,0 +1,14 @@
+name: test-release-on-tag-push
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push-docker:
+      uses: MapColonies/shared-workflows/.github/workflows/update-artifacts-file.yaml@master
+      secrets: inherit
+      with:
+        scope: infra
+        # type: docker
+        artifact-name: infra-test
+        artifact-tag: master

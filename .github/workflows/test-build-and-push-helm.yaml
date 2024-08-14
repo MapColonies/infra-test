@@ -1,0 +1,11 @@
+name: test-build-and-push-helm
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push-docker:
+      uses: MapColonies/shared-workflows/.github/workflows/build-and-push-helm.yaml@master
+      secrets: inherit
+      with:
+        scope: infra

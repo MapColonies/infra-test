@@ -1,0 +1,9 @@
+name: test-release-on-tag-push
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push-docker:
+      uses: MapColonies/shared-workflows/.github/workflows/release-on-tag-push.yaml@master
+      secrets: inherit
