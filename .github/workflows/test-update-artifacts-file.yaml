@@ -9,6 +9,6 @@ jobs:
       secrets: inherit
       with:
         scope: infra
-        # type: docker
+        type: helm
         artifact-name: infra-test
         artifact-tag: master
