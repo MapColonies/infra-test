@@ -1,4 +1,4 @@
-name: test-release-on-tag-push
+name: test-update-artifacts-file
 
 on:
   workflow_dispatch:
