@@ -8,7 +8,7 @@ jobs:
       uses: MapColonies/shared-workflows/.github/workflows/update-artifacts-file.yaml@multiple-scopes
       secrets: inherit
       with:
-        scope: non-existing-scopes
+        scope: infra,3d
         type: helm
         artifact-name: infra-test
         artifact-tag: master
