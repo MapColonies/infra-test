@@ -5,10 +5,10 @@ on:
 
 jobs:
   build-and-push-docker:
-      uses: MapColonies/shared-workflows/.github/workflows/update-artifacts-file.yaml@master
+      uses: MapColonies/shared-workflows/.github/workflows/update-artifacts-file.yaml@multiple-scopes
       secrets: inherit
       with:
-        scope: infra
+        scope: non-existing-scopes
         type: helm
         artifact-name: infra-test
         artifact-tag: master
