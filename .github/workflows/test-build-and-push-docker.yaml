@@ -7,3 +7,5 @@ jobs:
   build-and-push-docker:
       uses: MapColonies/shared-workflows/.github/workflows/build-and-push-docker.yaml@master
       secrets: inherit
+      with:
+        scope: YOUR-DOMAIN
