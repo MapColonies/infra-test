@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "release-please release-pr --token=${{ secrets.GITHUB_TOKEN }}"
+    "release": "release-please release-pr --token=${{ secrets.GITHUB_TOKEN }}",
+    "test": "echo 'hello'"
   },
   "devDependencies": {
     "release-please": "^15.3.0"
