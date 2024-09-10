@@ -1,0 +1,9 @@
+name: test-pull-request
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push-docker:
+      uses: MapColonies/shared-workflows/.github/workflows/pull_request.yaml@master
+      secrets: inherit
