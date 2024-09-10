@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.3](https://github.com/MapColonies/infra-test/compare/infra-test-v6.0.0...infra-test-v6.1.3) (2024-07-07)
+
+
+### Miscellaneous Chores
+
+* release v6.1.3 ([d49d2e0](https://github.com/MapColonies/infra-test/commit/d49d2e05d0044413d4c972a78a4fccc76d52f98a))
+
 ## [6.0.0](https://github.com/MapColonies/infra-test/compare/infra-test-v5.0.0...infra-test-v6.0.0) (2024-07-07)
 
 
